@@ -8,17 +8,13 @@ jobs:
   deploy:
     name: Setup Gcloud Account
     runs-on: ubuntu-latest
-    environment: otica_prod
+    environment: hw-prod
     env:
-      IMAGE_NAME: us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/gcr.io/site:latest
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/site:latest
     steps:
       # Git checkout
-      - name: Checkout do código
-        uses: actions/checkout@v4  
-
-      # Verificar se o Dockerfile existe
-      - name: Verificar existência do Dockerfile
-        run: ls -l Dockerfile || echo "Dockerfile não encontrado!"
+      - name: Checkout
+        uses: actions/checkout@v2
 
       # Login to GCP
       - uses: google-github-actions/setup-gcloud@v0.2.0
@@ -26,28 +22,18 @@ jobs:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      # Autenticar Docker no Google Artifact Registry
-      - name: Authenticate Docker
-        run: |
-          echo "${{ secrets.GCP_CREDENTIALS }}" | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+      # gcloud configure docker
+      - name: Configure Docker
+        run: gcloud auth configure-docker --quiet
 
-      # Build image
+      # build image
       - name: Build Docker image
         run: docker build -t $IMAGE_NAME .
 
-      # Push image to registry
+      # push image to registry
       - name: Push Docker image
         run: docker push $IMAGE_NAME
 
-      # Deploy to Google Cloud Run
+      # deploy image
       - name: Deploy Docker image
-        run: |
-          gcloud run deploy site \
-            --image $IMAGE_NAME \
-            --region us-central1 \
-            --memory 128Mi \
-            --min-instances 0 \
-            --max-instances 1 \
-            --platform managed \
-            --port 80 \
-            --allow-unauthenticated
+        run: gcloud run deploy site --image $IMAGE_NAME --region us-central1 --memory 128Mi --min-instances 0 --max-instances 1 --platform managed --port 80 --allow-unauthenticated
