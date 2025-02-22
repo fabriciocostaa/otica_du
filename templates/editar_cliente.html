@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Edição</h1>
+
+        <form id="formulario">
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <label for="data" class="form-label">Data:</label>
+                    <input type="date" id="data" name="data" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="profissao" class="form-label">Profissão:</label>
+                    <input type="text" id="profissao" name="profissao" class="form-control">
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="data_nasc" class="form-label">Data de nascimento:</label>
+                    <input type="date" id="data_nasc" name="data_nasc" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="idade" class="form-label">Idade:</label>
+                    <input type="number" id="idade" name="idade" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="sexo" class="form-label">Sexo:</label>
+                    <select id="sexo" name="sexo" class="form-select">
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="telefone_res" class="form-label">Telefone residêncial:</label>
+                    <input type="int" id="telefone_res" name="telefone_res" class="form-control">
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="cep" id="cep" name="cep" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="cidade" class="form-label">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="Telefone_cel" class="form-label">Telefone Cel:</label>
+                    <input type="int" id="telefone_cel" name="telefone_cel" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" class="form-control">
+                </div>
+               
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="telefone_comer" class="form-label">Telefone comercial:</label>
+                    <input type="int" id="telefone_comer" name="telefone_comer" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="Email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="data-ultima-consulta" class="form-label">Data da Última Consulta:</label>
+                    <input type="date" id="data_ultima_consulta" name="data_ultima_consulta" class="form-control">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <!-- Seção Anamnese -->
+                    <div class="col-md-6">
+                        <h2 class="h3 mt-4">Anamnese</h2>
+                        <div class="mb-3">
+                            <label for="mpc" class="form-label">M.P.C:</label>
+                            <textarea id="mpc" name="mpc" rows="1" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="antecedentes-pessoais" class="form-label">Antecedentes Pessoais:</label>
+                            <textarea id="antecedentes_pessoais" name="antecedentes_pessoais" rows="1" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="antecedentes-familiares" class="form-label">Antecedentes Familiares:</label>
+                            <textarea id="antecedentes_familiares" name="antecedentes_familiares" rows="1" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="medicamentos" class="form-label">Medicamentos em uso:</label>
+                            <textarea id="medicamentos" name="medicamentos" rows="1" class="form-control"></textarea>
+                        </div>
+                    </div>
+            
+                    <!-- Seção Avaliação das Pupilas -->
+                    <div class="col-md-6">
+                        <h2 class="h3 mt-4">Avaliação das Pupilas</h2>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="formato" class="form-label">Formato:</label>
+                                <input type="text" id="formato_pupila" name="formato_pupila" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rebordo" class="form-label">Rebordo:</label>
+                                <input type="text" id="rebordo_pupila" name="rebordo_pupila" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="diametro" class="form-label">Diâmetro:</label>
+                                <input type="text" id="diametro_pupila" name="diametro_pupila" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reacao-luz" class="form-label">Reação à Luz:</label>
+                                <input type="text" id="reacao_luz" name="reacao_luz" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="reacao-consensual" class="form-label">Reação Consensual:</label>
+                                <input type="text" id="reacao_consensual" name="reacao_consensual" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reacao-acomodativa" class="form-label">Reação Acomodativa:</label>
+                                <input type="text" id="reacao_acomodativa" name="reacao_acomodativa" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <h2 class="h5 mt-4">Exame Motor</h2>
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <label for="fixacao" class="form-label">Fixação:</label>
+                    <input type="text" id="fixacao" name="fixacao" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="dominancia" class="form-label">Dominância:</label>
+                    <input type="text" id="dominancia" name="dominancia" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="hirshberg" class="form-label">Hirshberg:</label>
+                    <input type="text" id="hirshberg" name="hirshberg" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="brucner" class="form-label">Brucner:</label>
+                    <input type="text" id="brucner" name="brucner" class="form-control">
+                </div>
+
+            
+                <div class="col-md-4">
+                    <label for="angulo-kappa-od" class="form-label">Ângulo Kappa OD:</label>
+                    <input type="text" id="angulo_kappa_od" name="angulo_kappa_od" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="angulo-kappa-oe" class="form-label">Ângulo Kappa OE:</label>
+                    <input type="text" id="angulo_kappa_oe" name="angulo_kappa_oe" class="form-control">
+                </div>
+
+            <div class="mb-3">
+                <label for="receituario" class="form-label">Receituário</label>
+                <textarea id="receituario" name="receituario" rows="4" class="form-control"></textarea>
+            </div>
+           
+            <div class="mb-3">
+                <label for="observacoes" class="form-label">Observações</label>
+                <textarea id="observacoes" name="observacoes" rows="4" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/editar_cliente.js"></script>
+
+
+</body>
+</html>
