@@ -1,4 +1,5 @@
-Recentemente, concluí um projeto: um sistema de registro de pacientes para uma clínica, desenvolvido do zero, desde o back-end até o front-end e o deploy. O objetivo era criar uma solução eficiente para gerenciar o cadastro de pacientes, com autenticação de usuários e operações CRUD (Create, Read, Update, Delete).
+Recentemente, concluí um projeto: um sistema de registro de pacientes para uma clínica, desenvolvido do zero, desde o back-end até o front-end e o deploy. O objetivo era criar uma solução eficiente para gerenciar o cadastro de pacientes, com autenticação de usuários e operações CRUD (Create, Read, Update, Delete).<br>
+
 🔧 Tecnologias e Ferramentas Utilizadas:
 Back-end: Desenvolvi uma API RESTful em Python utilizando o framework Flask, seguindo o paradigma de Programação Orientada a Objetos (POO) para garantir um código modular e de fácil manutenção.
 Front-end: Criei uma interface responsiva e intuitiva usando HTML, CSS (com Bootstrap) e JavaScript.
