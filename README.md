@@ -11,4 +11,4 @@ Realizei a integração completa entre o front-end e o back-end, garantindo que 
 Este projeto reforçou minhas habilidades em desenvolvimento full-stack, desde a criação de APIs até a entrega de uma aplicação funcional e bem estruturada. Estou muito satisfeito com o resultado e animado para aplicar esses aprendizados em novos desafios! <br>
 👨‍💻 Tecnologias: Python, Flask, SQLite, HTML, CSS, Bootstrap, JavaScript, Nginx, Gunicorn, Supervisor, Google Cloud, SQLALchemy, JWT.<br>
 
-** Link do projeto teste: https://goten11fabri-project.onrender.com/ **
+**Link do projeto teste: https://goten11fabri-project.onrender.com/**
